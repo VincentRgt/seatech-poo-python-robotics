@@ -5,6 +5,7 @@ class Robot:
     battery_level = 0
     states = ['shutown', 'running']
     name = "<unnamed>"
+    current_state=None
     #private
     __current_speed = 0
     __measured_speed = 0
@@ -15,11 +16,11 @@ class Robot:
 
     def power_on(self):
         self.__power = True
-        self.states = self.state[1]
+        self.current_state = self.states[1]
     
     def power_off(self):
         self.__power = False
-        self.states = self.state[0]
+        self.current_state = self.states[0]
 
     def charge_battery(self):
         now = time.time()
@@ -39,7 +40,7 @@ class Robot:
         self.__current_speed = 0 
     
     def current_stat(self):
-        print("state : ", self.states , "current_speed : ",self.get_current_speed,"mesured_speed : ",self.get_measured_speed)
+        print("state : ", self.current_state , "current_speed : ",self.get_current_speed,"mesured_speed : ",self.get_measured_speed)
 
 
     
