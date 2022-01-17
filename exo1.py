@@ -38,10 +38,11 @@ class Robot:
     def stop_robot_movement(self):
         self.__current_speed = 0 
     
-
-
     def current_stat(self):
-        print("state : ", self.states , "current_speed : ",self.get_current_speed,)
+        print("state : ", self.states , "current_speed : ",self.get_current_speed,"mesured_speed : ",self.get_measured_speed)
+
+
+    
 
 
         
